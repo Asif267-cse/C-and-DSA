@@ -1,4 +1,4 @@
-# C-and-DSA
+# C++-and-DSA
 Leveling Up: From C++ Novice to DSA Pro 🎮👑
 Project Overview
 Welcome to my C++ and DSA journey! This repository is dedicated to documenting my progress from mastering C++ fundamentals to exploring the intricacies of Data Structures and Algorithms (DSA). Whether you're a beginner or an experienced coder, you'll find something valuable here as we dive deep into coding concepts and best practices.
