@@ -1,0 +1,37 @@
+#include <iostream>
+#include <limits.h> // Include limits.h for INT_MIN
+using namespace std;
+
+// Function to find the second maximum element in the array
+int find_second_max_element(int arr[], int size) {
+    int max = INT_MIN; // Initialize maximum to the smallest integer
+    int second_max = INT_MIN; // Initialize second maximum to the smallest integer
+
+    for (int i = 0; i < size; i++) {
+        // Update max and second_max accordingly
+        if (arr[i] > max) {
+            second_max = max; // Update second max
+            max = arr[i]; // Update max
+        } else if (arr[i] > second_max && arr[i] < max) {
+            second_max = arr[i]; // Update second max only if it's less than max
+        }
+    }
+
+    return (second_max == INT_MIN) ? -1 : second_max; // Return -1 if there is no second max
+}
+
+int main() {
+    int arr[10] = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3}; // Example of an unsorted array
+
+    int size = sizeof(arr) / sizeof(arr[0]); // Calculate size of the array
+
+    int second_max = find_second_max_element(arr, size); // Call the find_second_max_element function
+
+    if (second_max == -1) {
+        cout << "There is no second maximum element." << endl; // No second max found
+    } else {
+        cout << "The second maximum element is: " << second_max << endl; // Output the second maximum element
+    }
+
+    return 0;
+}
